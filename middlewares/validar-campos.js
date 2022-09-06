@@ -1,4 +1,4 @@
-const {validationResult} = require("express-validator");
+const {validationResult} = require("express-validatior");
 
 const validarCampos= (req, res, next)=>{
     const errores = validationResult(req);
@@ -9,7 +9,6 @@ const validarCampos= (req, res, next)=>{
             errores: errores.mapped()
 
         });
-        
     }
     next();
 }
